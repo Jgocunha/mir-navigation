@@ -135,6 +135,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/simple_navigation_goals_node.cpp)
 add_executable(simple_navigation_goals src/simple_navigation_goals.cpp)
+add_executable(go_to_targets src/go_to_targets.cpp)
 
 
 ## Rename C++ executable without prefix
@@ -152,6 +153,7 @@ add_executable(simple_navigation_goals src/simple_navigation_goals.cpp)
 #   ${catkin_LIBRARIES}
 # )
 target_link_libraries(simple_navigation_goals ${catkin_LIBRARIES})
+target_link_libraries(go_to_targets ${catkin_LIBRARIES})
 
 
 #############
