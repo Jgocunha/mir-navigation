@@ -136,6 +136,8 @@ include_directories(
 # add_executable(${PROJECT_NAME}_node src/simple_navigation_goals_node.cpp)
 add_executable(simple_navigation_goals src/simple_navigation_goals.cpp)
 add_executable(go_to_targets src/go_to_targets.cpp)
+add_executable(four_corners src/four_corners.cpp)
+
 
 
 ## Rename C++ executable without prefix
@@ -154,6 +156,7 @@ add_executable(go_to_targets src/go_to_targets.cpp)
 # )
 target_link_libraries(simple_navigation_goals ${catkin_LIBRARIES})
 target_link_libraries(go_to_targets ${catkin_LIBRARIES})
+target_link_libraries(four_corners ${catkin_LIBRARIES})
 
 
 #############
