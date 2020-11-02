@@ -2,7 +2,7 @@
 <launch>
 
     <!-- launch the robot and world in gazebo -->
-    <include file = "$(find mir_gazebo)/launch/mir_maze_world.launch">
+    <include file = "$(find mir_gazebo)/launch/mir_DTx_world.launch">
     </include>
 
     <!-- start simulation -->
