@@ -11,6 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
   actionlib
   move_base_msgs
   roscpp
+  message_generation
+  rospy
 )
 
 ## System dependencies are found with CMake's conventions
@@ -138,8 +140,6 @@ add_executable(simple_navigation_goals src/simple_navigation_goals.cpp)
 add_executable(go_to_targets src/go_to_targets.cpp)
 add_executable(four_corners src/four_corners.cpp)
 
-
-
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -157,7 +157,6 @@ add_executable(four_corners src/four_corners.cpp)
 target_link_libraries(simple_navigation_goals ${catkin_LIBRARIES})
 target_link_libraries(go_to_targets ${catkin_LIBRARIES})
 target_link_libraries(four_corners ${catkin_LIBRARIES})
-
 
 #############
 ## Install ##
