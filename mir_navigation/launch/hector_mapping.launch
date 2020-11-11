@@ -6,7 +6,7 @@
   <arg name="pub_map_odom_transform" default="true"/>
   <arg name="scan_subscriber_queue_size" default="5"/>
   <arg name="scan_topic" default="scan"/>
-  <arg name="map_size" default="2048"/>
+  <arg name="map_size" default="2400"/>
     <!-- set use_tf_pose_start_estimate and map_with_known_poses to `true` when
          the map-base_footprint transform is provided by a different node, such
          as fake_localization -->
