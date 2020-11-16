@@ -31,6 +31,35 @@
       </visual>
       <pose frame=''>-1e-06 -12.1075 0 0 -0 0</pose>
     </link>
+    <link name='Wall_500'>
+      <collision name='Wall_500_Collision'>
+        <geometry>
+          <box>
+            <size>21 0.15 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 24.25 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_500_Visual'>
+        <pose frame=''>0 24.25 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>21 0.15 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0.760784 0.662745 0.627451 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <pose frame=''>-1e-06 -12.1075 0 0 -0 0</pose>
+    </link>
     <link name='Wall_101'>
       <collision name='Wall_101_Collision'>
         <geometry>
@@ -216,6 +245,35 @@
       </collision>
       <visual name='Wall_2_Visual'>
         <pose frame=''>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>24.25 0.15 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+          <ambient>0.760784 0.662745 0.627451 1</ambient>
+        </material>
+        <meta>
+          <layer>0</layer>
+        </meta>
+      </visual>
+      <pose frame=''>10.425 -0.057499 0 0 -0 1.5708</pose>
+    </link>
+    <link name='Wall_502'>
+      <collision name='Wall_502_Collision'>
+        <geometry>
+          <box>
+            <size>24.25 0.15 2.5</size>
+          </box>
+        </geometry>
+        <pose frame=''>0 21 1.25 0 -0 0</pose>
+      </collision>
+      <visual name='Wall_502_Visual'>
+        <pose frame=''>0 21 1.25 0 -0 0</pose>
         <geometry>
           <box>
             <size>24.25 0.15 2.5</size>

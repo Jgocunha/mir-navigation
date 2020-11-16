@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <launch>
     <node name="spawn_floor_plan_DTx" pkg="gazebo_ros" type="spawn_model" args="-sdf
-      -file $(find mir_gazebo)/sdf/IKEAfactory/model.sdf -model walls" output="screen" />
+      -file $(find mir_gazebo)/sdf/IKEAfactoryV2/model.sdf -model walls" output="screen" />
 </launch>
