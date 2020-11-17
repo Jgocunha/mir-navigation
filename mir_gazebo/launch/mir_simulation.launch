@@ -10,8 +10,9 @@
 
     <!-- localization -->
     <include file = "$(find mir_navigation)/launch/amcl.launch">
-        <arg name = "initial_pose_x" value = "0.0"/>
-        <arg name = "initial_pose_y" value = "0.0"/>
+        <arg name = "initial_pose_x" value = "-8.2"/>
+        <arg name = "initial_pose_y" value = "-11.5"/>
+        <arg name = "initial_pose_a" value = "1.575"/>
     </include>
 
     <!-- navigation -->
