@@ -14,11 +14,16 @@
        non-empty prefix, set prepend_prefix_to_laser_frame to 'true'. -->
   <xacro:arg name="prepend_prefix_to_laser_frame" default="false" />
 
+  <!--MiR-100-->
   <xacro:include filename="$(find mir_description)/urdf/include/common_properties.urdf.xacro" />
   <xacro:include filename="$(find mir_description)/urdf/include/imu.gazebo.urdf.xacro" />
   <xacro:include filename="$(find mir_description)/urdf/include/mir_100.gazebo.xacro" />
   <xacro:include filename="$(find mir_description)/urdf/include/mir_100.transmission.xacro" />
   <xacro:include filename="$(find mir_description)/urdf/include/sick_s300.urdf.xacro" />
+
+  <!--UR1O-->
+  <xacro:include filename="$(find mir_description)/urdf/include/ur10.urdf.xacro"/>
+  <!-- <xacro:include filename="$(find mir_description)/urdf/include/cabinet.xacro"/> -->
 
   <xacro:property name="deg_to_rad" value="0.017453293" />
 
@@ -258,5 +263,22 @@
     <xacro:set_all_wheel_frictions prefix="${prefix}"/>
 
     <xacro:p3d_base_controller prefix="${prefix}" />
+
+    <!--cabinet-->
+    <!-- <xacro:mmo_500_cabinet name="cabinet" parent="base_link">
+      <origin xyz="0.072 0 0.386" rpy="0 0 0" />
+    </xacro:mmo_500_cabinet> -->
+
+    <!--ur10-->
+    <xacro:ur10_robot parent="base_link" prefix="ur10" joint_limited="true"
+                    shoulder_pan_lower_limit="${-pi}" shoulder_pan_upper_limit="${pi}"
+                    shoulder_lift_lower_limit="${-pi}" shoulder_lift_upper_limit="${pi}"
+                    elbow_joint_lower_limit="${-pi}" elbow_joint_upper_limit="${pi}"
+                    wrist_1_lower_limit="${-pi}" wrist_1_upper_limit="${pi}"
+                    wrist_2_lower_limit="${-pi}" wrist_2_upper_limit="${pi}"
+                    wrist_3_lower_limit="${-pi}" wrist_3_upper_limit="${pi}">
+    </xacro:ur10_robot>
+
+
   </xacro:macro>
 </robot>
