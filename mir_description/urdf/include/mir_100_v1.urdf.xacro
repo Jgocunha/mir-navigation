@@ -23,7 +23,7 @@
 
   <!--UR1O-->
   <xacro:include filename="$(find mir_description)/urdf/include/ur10.urdf.xacro"/>
-  <!-- <xacro:include filename="$(find mir_description)/urdf/include/cabinet.xacro"/> -->
+  <xacro:include filename="$(find mir_description)/urdf/include/cabinet.urdf.xacro"/>
 
   <xacro:property name="deg_to_rad" value="0.017453293" />
 
@@ -265,12 +265,12 @@
     <xacro:p3d_base_controller prefix="${prefix}" />
 
     <!--cabinet-->
-    <!-- <xacro:mmo_500_cabinet name="cabinet" parent="base_link">
-      <origin xyz="0.072 0 0.386" rpy="0 0 0" />
-    </xacro:mmo_500_cabinet> -->
-
+    <xacro:cabinet name="cabinet" parent="base_link">
+      <origin xyz="0.072 0 0.35" rpy="0 0 0" />
+    </xacro:cabinet> 
+    
     <!--ur10-->
-    <xacro:ur10_robot parent="base_link" prefix="ur10" joint_limited="true"
+    <xacro:ur10_robot parent="cabinet_link" prefix="ur10" joint_limited="true"
                     shoulder_pan_lower_limit="${-pi}" shoulder_pan_upper_limit="${pi}"
                     shoulder_lift_lower_limit="${-pi}" shoulder_lift_upper_limit="${pi}"
                     elbow_joint_lower_limit="${-pi}" elbow_joint_upper_limit="${pi}"

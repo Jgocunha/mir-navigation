@@ -64,10 +64,10 @@
      wrist_3_lower_limit:=${-pi}    wrist_3_upper_limit:=${pi}">
 
 
-    <joint name="cabinet_u10_joint" type="fixed">
+    <joint name="cabinet_ur10_joint" type="fixed">
       <parent link="${parent}" />
       <child link = "ur10_base_link" />
-      <origin xyz="0.133 0.0 0.7" rpy="0.0 0.0 0.0" />
+      <origin xyz="0.133 0.0 0.4" rpy="0.0 0.0 0.0" />
     </joint>
 
     <link name="ur10_base_link" >
