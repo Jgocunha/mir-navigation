@@ -2,7 +2,9 @@
 <launch>
 
     <!-- launch the robot and world in gazebo -->
-    <include file = "$(find mir_gazebo)/launch/mir_DTx_world.launch">
+    <!-- <include file = "$(find mir_gazebo)/launch/mir_DTx_world.launch">
+    </include> -->
+    <include file = "$(find mir_gazebo)/launch/mir_ikea_world.launch">
     </include>
 
     <!-- start simulation -->
@@ -10,14 +12,16 @@
 
     <!-- localization -->
     <include file = "$(find mir_navigation)/launch/amcl.launch">
-        <arg name = "initial_pose_x" value = "0.0"/>
-        <arg name = "initial_pose_y" value = "0.0"/>
+        <arg name = "initial_pose_x" value = "-8.2"/>
+        <arg name = "initial_pose_y" value = "-11.5"/>
+        <arg name = "initial_pose_a" value = "1.575"/>
     </include>
 
     <!-- navigation -->
     <include file = "$(find mir_navigation)/launch/start_planner.launch">
-        <arg name = "map_file" value = "$(find mir_gazebo)/maps/dtx_map.yaml"/>
+        <!--<arg name = "map_file" value = "$(find mir_gazebo)/maps/dtx_map.yaml"/> -->
         <!-- <arg name = "virtual_walls_map_file" value = "$(find mir_gazebo)/maps/maze_virtual_walls.yaml"/> -->
+        <arg name = "map_file" value = "$(find mir_gazebo)/maps/IKEA.yaml"/>
     </include>
 
     <!-- Rviz-->

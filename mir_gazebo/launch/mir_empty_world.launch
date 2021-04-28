@@ -3,9 +3,15 @@
   <arg name="gui" default="true" />
   <arg name="world_name" default="worlds/empty.world"/> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable, but can also be an absolute path -->
 
-  <arg name="robot_x"   default="0.0" />
+  <!--Starting location and orientation-->
+  <!-- <arg name="robot_x"   default="0.0" />
   <arg name="robot_y"   default="0.0" />
-  <arg name="robot_yaw" default="0.0" />
+  <arg name="robot_yaw" default="0.0" /> -->
+
+  <!--For IKEA Map-->
+  <arg name="robot_x"   default="-8.2" />
+  <arg name="robot_y"   default="-11.5" />
+  <arg name="robot_yaw" default="1.575" />
 
   <arg name="tf_prefix" default="" doc="tf_prefix to be used by gazebo plugins and in the robot's urdf etc." />
 

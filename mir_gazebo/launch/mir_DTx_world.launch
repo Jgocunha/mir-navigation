@@ -8,5 +8,11 @@
     <arg name="tf_prefix" value="$(arg tf_prefix)" />
   </include>
 
-   <include file="$(find mir_gazebo)/launch/includes/spawn_floor_plan_DTx.launch.xml" /> 
+  <include file="$(find mir_gazebo)/launch/includes/spawn_floor_plan_DTx.launch.xml" />
+  <!--
+  <include file="$(find mir_gazebo)/launch/includes/spawn_all.launch.xml" />
+   <include file="$(find mir_gazebo)/launch/includes/spawn_human.launch.xml" />
+
+   <include file="$(find mir_gazebo)/launch/includes/spawn_human.launch.xml" />-->
+
 </launch>

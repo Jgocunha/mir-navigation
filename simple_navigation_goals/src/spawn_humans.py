@@ -18,7 +18,7 @@ from gazebo_msgs.msg import ModelState, ModelStates
 
 # Create a global variable containing the path to a certain model
 home = expanduser("~")
-path = home + '/ROS/mir-navigation/src/person_sim/models/person_standing/model.sdf'
+path = home + '/ROS/mir-navigation/src/person_sim/models/kumaeye/model.sdf'
 
 
 class Moving():
@@ -56,6 +56,8 @@ class Moving():
 				obstacle.twist = Twist()
 				obstacle.twist.linear.x = distance
 				obstacle.twist.angular.z = 0
+				obstacle.twist.angular.x = 0
+				obstacle.twist.angular.y = 0
 				self.pub_model.publish(obstacle)
 			elif model.name[i] == self.model_name and round(model.pose[i].position.x,1) != round(self.x_model_pose,1):
 				self.flag1 = 1
@@ -114,10 +116,10 @@ def main():
 	distance_min=1.0
 	distance_max=1.5
 
-	#while not rospy.is_shutdown():
+	while not rospy.is_shutdown():
 		# move objects
-		#obj0.moving_x(distance_max)
-		#obj1.moving_x(distance_max)
+		obj0.moving_x(distance_max)
+		obj1.moving_x(distance_max)
 
 
 if __name__ == '__main__':

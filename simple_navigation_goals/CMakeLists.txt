@@ -139,6 +139,8 @@ include_directories(
 add_executable(simple_navigation_goals src/simple_navigation_goals.cpp)
 add_executable(go_to_targets src/go_to_targets.cpp)
 add_executable(four_corners src/four_corners.cpp)
+add_executable(go_to_depal_pos src/go_to_depal_pos)
+
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -157,6 +159,7 @@ add_executable(four_corners src/four_corners.cpp)
 target_link_libraries(simple_navigation_goals ${catkin_LIBRARIES})
 target_link_libraries(go_to_targets ${catkin_LIBRARIES})
 target_link_libraries(four_corners ${catkin_LIBRARIES})
+target_link_libraries(go_to_depal_pos ${catkin_LIBRARIES})
 
 #############
 ## Install ##
